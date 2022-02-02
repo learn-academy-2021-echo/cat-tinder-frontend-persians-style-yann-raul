@@ -4,7 +4,7 @@ class Home extends Component{
   render(){
     return(
       <>
-      <h1>Homes Page</h1>
+      <h1 style={{color: "red", textAlign: "center"}}>Homes Page</h1>
       </>
     )
   }
