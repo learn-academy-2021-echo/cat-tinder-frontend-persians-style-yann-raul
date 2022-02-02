@@ -10,4 +10,4 @@ class CatEdit extends Component{
   }
 }
 
-export default CatEdit;
+export default CatEdit; 

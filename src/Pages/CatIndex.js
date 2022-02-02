@@ -17,6 +17,6 @@ class CatIndex extends Component {
         })}
       </>
     )
-  }
+  } 
 }
 export default CatIndex

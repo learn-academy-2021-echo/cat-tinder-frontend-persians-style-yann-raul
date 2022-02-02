@@ -10,4 +10,4 @@ class CatNew extends Component{
   }
 }
 
-export default CatNew;
+export default CatNew; 
