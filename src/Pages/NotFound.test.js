@@ -33,4 +33,3 @@
 //     expect(renderedHomeRoute.props().component).toEqual(Home)
 //   })
 // })
-
