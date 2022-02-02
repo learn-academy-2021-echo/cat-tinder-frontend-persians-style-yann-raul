@@ -1,31 +1,22 @@
-// import React from 'react'
-// import Enzyme, { shallow } from 'enzyme'
-// import Adapter from 'enzyme-adapter-react-16'
-// import App from './App'
-// import Home from './pages/Home'
+import React from 'react'
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+import Home from './Home'
 
-// Enzyme.configure({ adapter: new Adapter() })
-
+Enzyme.configure({ adapter: new Adapter() })
 
 
-// describe("When the Home renders",() => {
-//   it("displays a header and a footer", () => {
+
+describe("When the Home renders",() => {
+  it("displays a page", () => {
  
-//     const renderedApp = shallow(<App/>)
+    const renderedApp = shallow(<Home/>)
    
   
-//     const renderedHome = renderedApp.find("Home")
+    const renderedHome = renderedApp.find("Home")
    
-//     expect(renderedHeader.length).toEqual(1)
+    expect(renderedHome.length).toEqual(0)
    
-//   })
-//   it("providing a route '/' to the home component",() => {
-   
-//     const renderedApp = shallow(<App/>)
-    
-//     const renderedHomeRoute = renderedApp.find('[path="/"]')
-   
-//     expect(renderedHomeRoute.length).toEqual(1)
-//     expect(renderedHomeRoute.props().component).toEqual(Home)
-//   })
-// })
+  })
+
+})
