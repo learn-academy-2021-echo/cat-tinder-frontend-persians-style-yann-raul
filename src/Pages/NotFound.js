@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 
-class NotFound extends Component{
-  render(){
+
+class NotFound extends Component {
+  render() {
     return(
-      <>
-      <h1>Not Found Page</h1>
-      </>
+      <div className="page-body">
+        <h3>Ooops, no cats here!</h3>
+        
+      </div>
     )
   }
 }
-
-export default NotFound;
+export default NotFound 
