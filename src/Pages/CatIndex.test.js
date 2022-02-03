@@ -3,19 +3,20 @@ import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import CatIndex from './CatIndex'
 
-Enzyme.configure({ adapter: new Adapter() })
+
+Enzyme.configure({ adapter: new Adapter()})
 
 
 
 describe("When the CatIndex renders",() => {
-  it("displays a list of cats", () => {
+  it("displays a list of cats from mockcats", () => {
  
-    const renderedApp = shallow(<CatIndex/>)
+    const catIndex = shallow(<CatIndex />)
    
   
-    const renderedCatIndex = renderedApp.find("CatIndex")
+    const allcats = catIndex.find("p").text()
    
-    expect(renderedCatIndex.length).toEqual(0)
+    expect(allcats).toEqual("No cats")
    
   })
 
