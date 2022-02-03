@@ -20,4 +20,4 @@ describe("When the CatIndex renders",() => {
    
   })
 
-}) 
+})   
