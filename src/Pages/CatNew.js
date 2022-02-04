@@ -50,7 +50,7 @@ class CatNew extends Component {
         <Form>
           <FormGroup >
             <Label for="name" >
-              Cat Name
+              Cat Name:
             </Label>
             <Input
               name="name"
@@ -61,7 +61,7 @@ class CatNew extends Component {
           </FormGroup>
           <FormGroup>
             <Label for="age">
-              Cat Age
+              Cat Age:
             </Label>
             <Input
               name="age"
@@ -72,7 +72,7 @@ class CatNew extends Component {
           </FormGroup>
           <FormGroup>
             <Label for="enjoys">
-              Cat's favorite hobbies
+              Cat's favorite hobbies:
             </Label>
             <Input
               name="enjoys"
@@ -83,7 +83,7 @@ class CatNew extends Component {
           </FormGroup>
           <FormGroup>
             <Label for="img">
-              Cat Profile Picture
+              Cat Profile Picture:
             </Label>
             <Input
               name="img"

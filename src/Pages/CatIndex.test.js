@@ -13,9 +13,9 @@ describe("When the CatIndex renders",() => {
     const renderedApp = shallow(<CatIndex/>)
    
   
-    const renderedCatIndex = renderedApp.find("CatIndex")
+    const renderedHeader = renderedApp.find("h2")
    
-    expect(renderedCatIndex.length).toEqual(0)
+    expect(renderedHeader.text()).toEqual("Cat Index Page")
    
   })
 
