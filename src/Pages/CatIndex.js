@@ -19,4 +19,4 @@ class CatIndex extends Component {
     )
   } 
 }
-export default CatIndex 
+export default CatIndex  
