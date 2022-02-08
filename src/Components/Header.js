@@ -21,7 +21,10 @@ class Header extends Component {
         <img src={mycat2} alt="logo for Cat Tinder" className="cat-logo2"/>
         
 
-
+        <ul>
+          <NavLink to="">Home</NavLink>
+          </ul>
+          
           <ul>
             <NavLink to="/catindex">Meet the Cats</NavLink>
           </ul>
@@ -31,6 +34,8 @@ class Header extends Component {
           <ul>
             <a target="blank"href="https://www.aspca.org/adopt-pet/adoptable-cats-your-local-shelter" id="aspca">Adopt a Cat!</a>
           </ul>
+
+          
         </div>
       </header>
     )

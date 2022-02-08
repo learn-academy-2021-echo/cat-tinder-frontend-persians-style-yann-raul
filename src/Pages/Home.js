@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import mycat2 from '../Assets/mycat2.png'
 
 
+
 class Home extends Component {
   render() {
     return (
