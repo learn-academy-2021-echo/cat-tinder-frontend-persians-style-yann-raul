@@ -14,7 +14,7 @@
     Route,
     Switch
   } from 'react-router-dom'
-  import cats from './mockCats'
+  
   import './App.css'
   
 
@@ -25,14 +25,68 @@
     constructor(props){
       super(props)
       this.state = {
-        cats: cats
-      }
+        cats: []
     }
-  
-    createCat = (cat) => {
-      console.log("Cat has been created", cat);
+  }
+    componentDidMount(){
+        this.readCat()
     }
+      
+    readCat = () => {
+      fetch("http://localhost:3000/cats")
+      .then(response => response.json())
+      .then(catsArray => this.setState({cats: catsArray}))
+      .catch(errors => console.log("Cat read errors:", errors))
+    }
+
+    createCat = (newCat) => {
+      fetch("http://localhost:3000/cats", {
+       
+        body: JSON.stringify(newCat),
+        
+        headers: {
+          "Content-Type": "application/json"
+        },
+        
+        method: "POST"
+      })
+      .then(response => response.json())
+      .then(payload => this.readCat())
+      .catch(errors => console.log("Cat create errors:", errors))
+    }
+
+    updateCat = (cat, id) => {
+      fetch(`http://localhost:3000/cats/${id}`, {
+        
+        body: JSON.stringify(cat),
+       
+        headers: {
+          "Content-Type": "application/json"
+        },
+        
+        method: "PATCH"
+      })
+      .then(response => response.json())
+      .then(payload => this.readCat())
+      .catch(errors => console.log("Cat update errors:", errors))
+    }
+
+    deleteCat = (id) => {
+      fetch(`http://localhost:3000/cats/${id}`, {
+        headers: {
+          "Content-Type": "application/json"
+        },
+        method: "DELETE"
+      })
+      .then(response => response.json())
+      .then(payload => this.readCat())
+      .catch(errors => console.log("delete errors:", errors))
+    }
+
+
   
+
+
     render(){
       return(
         <Router>
@@ -68,5 +122,22 @@
       )
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
   
   export default App;
